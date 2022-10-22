@@ -39,13 +39,9 @@ public class Main {
           .name(row[1])
           .age(row[2])
           .balanced(Float.valueOf(row[3]))
-          .thread2b(0)
-          .thread3(0)
           .prevBalanced(Float.valueOf(row[4]))
           .avgBalanced(Float.valueOf(row[5]))
-          .thread1(0)
           .freeTransfer(Float.valueOf(row[6]))
-          .thread2a(0)
           .build();
         eodList.add(eod);
       }
@@ -145,7 +141,7 @@ public class Main {
     while (eodIterator.hasNext()) {
       Eod eod = eodIterator.next();
       records.add(new String[] {
-        eod.getId(), eod.getName(), eod.getAge(), df.format(eod.getBalanced()), String.valueOf(eod.getThread2b()), String.valueOf(eod.getThread3()),
+        eod.getId(), eod.getName(), eod.getAge(), df.format(eod.getBalanced()), String.valueOf(eod.getThread2b()), eod.getThread3() != null ? String.valueOf(eod.getThread3()) : "",
         df.format(eod.getPrevBalanced()), df.format(eod.getAvgBalanced()), String.valueOf(eod.getThread1()), df.format(eod.getFreeTransfer()), String.valueOf(eod.getThread2a())
       });
     }

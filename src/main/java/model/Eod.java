@@ -14,11 +14,11 @@ public class Eod {
     private String name;
     private String age;
     private float balanced;
-    private long thread2b;
-    private long thread3;
+    private Long thread2b;
+    private Long thread3;
     private float prevBalanced;
     private float avgBalanced;
-    private long thread1;
+    private Long thread1;
     private float freeTransfer;
-    private long thread2a;
+    private Long thread2a;
 }
